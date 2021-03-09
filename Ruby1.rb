@@ -5,4 +5,4 @@ MidleName = gets
 puts 'Фамилия?'
 SecondName = gets
 
-#puts 'Хорошо. Теперь я буду обращаться к тебе ' + FirstName + ' '+ MidleName + ' ' + SecondName + '.'
+puts 'Хорошо. Теперь я буду обращаться к тебе ' + FirstName + ' '+ MidleName + ' ' + SecondName + '.'
