@@ -1,10 +1,1 @@
-puts 'Привет! Напиши пожалуйста, как тебя зовут?'
-FirstName = gets
-
-puts 'Какое твоё отчество?'
-MidleName = gets
-
-puts 'Фамилия?'
-SecondName = gets
-
-puts 'Хорошо. Теперь я буду обращаться к тебе ' + FirstName + ' '+ MidleName + ' ' + SecondName + '.'
+puts "Введите своё имя.: #{a=gets.chomp} Введите своё отчество: #{b=gets.chomp} Введите свою фамилию: #{с=gets.chomp}. Хорошо.\nТеперь мы будем обращаться к вам #{с.capitalize} #{a.capitalize} #{b.capitalize}."
