@@ -1,1 +1,5 @@
-puts "Введите своё имя.: #{a=gets.chomp} Введите своё отчество: #{b=gets.chomp} Введите свою фамилию: #{с=gets.chomp}. Хорошо.\nТеперь мы будем обращаться к вам #{с.capitalize} #{a.capitalize} #{b.capitalize}."
+puts "Введите своё имя.: #{a=gets.chomp}
+Введите своё отчество: #{b=gets.chomp} 
+Введите свою фамилию: #{с=gets.chomp}. 
+Хорошо.\n
+Теперь мы будем обращаться к вам #{с.capitalize} #{a.capitalize} #{b.capitalize}."
