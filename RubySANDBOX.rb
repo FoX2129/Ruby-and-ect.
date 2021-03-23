@@ -32,6 +32,7 @@
 # a = %w{ муравей пчела кот собака лось } - массив из слов.
 
 # def say_goodnight(name)
+<<<<<<< HEAD
 # result = 'Спокойной ночи, ' + name
 # return result
 # end
@@ -42,6 +43,12 @@
 # http://localhost:3000/store/index
 
 # depot> rake db:rollback
+=======
+#  result = 'Спокойной ночи, ' + name
+#  return result
+# end
+# puts say_goodnight('Капиталист')
+>>>>>>> 5d90d40657632a6924be06df77384f0f5beeed5a
 
 a="Хрен с маслом"
 if a =~ /\040/
