@@ -1,5 +1,6 @@
 module ItemContainer
 
+  module Manager
 
     def add_item(item)
       @items.push item
@@ -16,5 +17,14 @@ module ItemContainer
     def delete_invalid_items
       @items.delete_if {|i| i.price.nil?}
     end
+  end
+
+  module Info
+
+    def count_valiid_items
+      @items.count {|i| i.price}
+    end
+    
+  end
 
 end

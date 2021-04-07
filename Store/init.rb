@@ -27,3 +27,5 @@ order.remove_item
 
 puts cart.items.size
 puts order.items.size
+
+puts cart.count_valiid_items
