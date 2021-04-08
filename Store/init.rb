@@ -8,6 +8,6 @@ require_relative "real_item"
 
 @items = []
 #cart.add_item(Item.new({:price => 30,:weight => 3}))
-@items << VirtualItem.new({:price =>111, :weight => 2, :height => 1, :name => "Диван"})
+@items << VirtualItem.new({:price =>111, :name => "Диван"})
 @items << RealItem.new({:price => 0, :weight => 50, :height => 60, :name => "Стена"})
-@items << VirtualItem.new({:price => 105, :name => "нига"})
+@items << RealItem.new({:price => 105, :weight => 1, :height=> 0.5, :name => "нига"})

@@ -11,7 +11,7 @@ module ItemContainer
     def add_item(item)
       #byebug
       puts "#{self.class.min_price} = min_price"
-      puts item.price
+      puts item.real_price
       unless item.price < self.class.min_price
         @items.push item
       end
