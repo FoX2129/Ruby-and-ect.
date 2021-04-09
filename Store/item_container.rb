@@ -8,14 +8,19 @@ module ItemContainer
 
   module InstanceMethods
 
+    def method_missing(method_name)
+      if method_name =~ /^all_/
+        show_all_items_with_name(method_name.to_s.sub(/^all_/,'').chomp('s'))
+      else
+        super #puts "method #{method_name} is not defined  on this object"
+      end
+    end
+
     def add_item(item)
       #byebug
-      puts "#{self.class.min_price} = min_price"
-      puts item.real_price
       unless item.price < self.class.min_price
         @items.push item
       end
-      puts "выход из add_item"
     end
 
     def remove_item
@@ -35,7 +40,19 @@ module ItemContainer
       @items.count {|i| i.price}
     end
 
+    private
+
+    def show_all_items_with_name(n)
+      #puts "i.name.downcase = #{i.name.downcase}"
+      @items.each do |i|
+        if n == i.name.downcase
+          i
+        end
+      end
+    end
+
   end
+
 
   def self.included(base)
     base.extend ClassMethods
