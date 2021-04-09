@@ -32,17 +32,17 @@ class Item
   end
 
   private
-    def tax
-      type_tax = if self.class == VirtualItem
-        1
-      else
-        2
-      end
-      cost_tax = if @real_price > 5
-        @real_price*0.2
-      else
-        @real_price*0.1
-      end
-      cost_tax + type_tax
+  def tax
+    type_tax = if self.class == VirtualItem
+      1
+    else
+      2
     end
+    cost_tax = if @real_price > 5
+      @real_price*0.2
+    else
+      @real_price*0.1
+    end
+    cost_tax + type_tax
+  end
 end

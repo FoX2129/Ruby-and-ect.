@@ -43,15 +43,12 @@ module ItemContainer
     private
 
       def show_all_items_with_name(n)
-        puts "n = #{n}"
-
-        @items.map do |i|
-          puts "стена"#"i.name.downcase = #{i.name.downcase}"
-           if n.gsub(/[^\p{L}\d]/,'') == i.name.downcase.gsub(/[^\p{L}\d]/,'')
-             puts "Yes"
-             i
-           end
-         end
+        @items.map { |i|  i if n.gsub(/[^\p{L}\d]/,'') == i.name.downcase.gsub(/[^\p{L}\d]/,'')}.delete_if {|i| i.nil?}
+        #@items.map do |i|
+        #   if n.gsub(/[^\p{L}\d]/,'') == i.name.downcase.gsub(/[^\p{L}\d]/,'')
+        #     i.to_s
+        #   end
+        # end
       end
 
   end
