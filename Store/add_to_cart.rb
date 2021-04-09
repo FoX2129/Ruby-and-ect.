@@ -8,5 +8,6 @@ cart.read_from_file
 begin
   cart.save_to_file
 rescue Cart::ItemNotSupported
-  puts "Sorry. No one VirtualItem can be added in cart yet."
+  puts "Sorry, Your item is unsupported (maybe yet). You can not add to cart this types of items:
+  #{Cart::UNSUPPORTED_ITEMS}"
 end
