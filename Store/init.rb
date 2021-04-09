@@ -15,8 +15,7 @@ require_relative "order"
 @items << RealItem.new({:price => 105, :weight => 1, :height=> 0.5, :name => "нига"})
 
 cart = Cart.new("Andrey")
-cart.add_item RealItem.new({:price => 0, :weight => 50, :height => 60, :name => "Cтена"})
-cart.add_item RealItem.new({:price => 1, :weight => 70, :height => 60, :name => "Cтена"})
-cart.add_item RealItem.new({:price => 0, :weight => 90, :height => 60, :name => "Cтена"})
+cart.add_item RealItem.new({:price => 0, :weight => 50, :height => 60, :name => "Car"})
+cart.add_item RealItem.new({:price => 1, :weight => 70, :height => 60, :name => "Car"})
 cart.add_item RealItem.new({:price => 105, :weight => 1, :height=> 0.5, :name => "нига"})
-p cart.all_стенаs
+p cart.all_cars

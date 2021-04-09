@@ -42,14 +42,17 @@ module ItemContainer
 
     private
 
-    def show_all_items_with_name(n)
-      #puts "i.name.downcase = #{i.name.downcase}"
-      @items.each do |i|
-        if n == i.name.downcase
-          i
-        end
+      def show_all_items_with_name(n)
+        puts "n = #{n}"
+
+        @items.map do |i|
+          puts "стена"#"i.name.downcase = #{i.name.downcase}"
+           if n.gsub(/[^\p{L}\d]/,'') == i.name.downcase.gsub(/[^\p{L}\d]/,'')
+             puts "Yes"
+             i
+           end
+         end
       end
-    end
 
   end
 
