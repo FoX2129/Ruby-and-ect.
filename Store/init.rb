@@ -1,5 +1,6 @@
-require_relative "store_application"
+require_relative "app/store_application"
 StoreApplication.config do |app|
+
   app.name        = "My Store"
   app.environment = :production
 
@@ -11,14 +12,7 @@ StoreApplication.config do |app|
 
 end
 
-unless StoreApplication.frozen?
-  StoreApplication.name = "My name"
-end
-#StoreApplication::Admin.email = "Deleted"
-p StoreApplication::Admin.email
-
 @items = []
-#cart.add_item(Item.new({:price => 30,:weight => 3}))
 @items << AntiqueItem.new(:price => 111, :name => "Диван")
 @items << RealItem.new(price: 0, weight: 50, height: 60, name: "Стена")
 @items << RealItem.new({:price => 105, :weight => 1, :height=> 0.5, :name => "нига"})
