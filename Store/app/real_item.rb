@@ -8,6 +8,10 @@ class RealItem < Item
     super
   end
 
+  def to_s
+    super + " : #{self.weight} : #{self.height}"
+  end
+
   def info
     yield(weight)
     yield(height)
