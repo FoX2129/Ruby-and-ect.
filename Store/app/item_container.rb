@@ -16,6 +16,10 @@ module ItemContainer
       end
     end
 
+    def add_items(items)
+
+    end
+
     def add_item(item)
       #byebug
       unless item.price < self.class.min_price
