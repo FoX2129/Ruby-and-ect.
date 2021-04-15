@@ -5,6 +5,7 @@ class StoreApplication
       unless @instance
         yield(self)
         puts "Loading..."
+        require "pony"
         require_relative "string"
         require_relative "item_container"
         require_relative "item"
@@ -15,6 +16,7 @@ class StoreApplication
         require_relative "order"
       end
       @instance ||=self
+      @instance.freeze
     end
 
     attr_accessor :name, :environment
@@ -27,12 +29,13 @@ class StoreApplication
   class Admin
 
     class << self
-      
+
       def new
         unless @instance
           yield(self)
         end
         @instance ||= self
+        @instance.freeze
       end
 
       attr_accessor :email, :login

@@ -1,10 +1,8 @@
 class Order<Cart
 
-  attr_reader :items
+  attr_reader :items, :placed_at
 
   include ItemContainer
-
-  
 
   def initialize
     @items = Array.new
@@ -12,7 +10,10 @@ class Order<Cart
   end
 
   def place
-    # actually place an order
+    @placed_at = Time.now
+
+  #  Pony.mail(:to => StoreApplication::Admin.email,
+  #  :from => "My Store <")
   end
 
 end
