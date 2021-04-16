@@ -12,7 +12,7 @@ describe Cart do
       item1= Item.new(price: 100, name: "Name1")
       item2= Item.new(price: 200, name: "Name2")
       cart.add_items(item1, item2)
-      cart.items.should include(item1, item2 )
+      cart.items.should include(item1, item2)
     end
 
 end
