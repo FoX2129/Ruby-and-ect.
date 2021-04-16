@@ -52,7 +52,8 @@
 #@placed_at = Time.now
 #puts order.placed_at.strftime("$b %-d, %Y %H:%M:%S")
 
-
+#describe <something>
+#context <when... / if... / with... / given...>
 
 
 a="Хрен с маслом"
