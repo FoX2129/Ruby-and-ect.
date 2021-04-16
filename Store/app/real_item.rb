@@ -2,6 +2,9 @@ class RealItem < Item
 
   attr_reader :weight, :height
 
+  show_info_about :weight, lambda { |attr| attr > 10}
+
+
   def initialize(options)
     @weight = options[:weight]
     @height = options[:height]
@@ -13,7 +16,9 @@ class RealItem < Item
   end
 
   def info
-    yield(weight)
+    if !@@show_info_about[:weight] || @@show_info_about[:weight].call(weight)
+      yield(weight)
+    end
     yield(height)
     super
   end

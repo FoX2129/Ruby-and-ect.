@@ -55,10 +55,12 @@
 #describe <something>
 #context <when... / if... / with... / given...>
 
+#a="Хрен с маслом"
+#if a =~ /\040/
+#  puts "da"
+#else
+#  puts  "net"
+#end
 
-a="Хрен с маслом"
-if a =~ /\040/
-  puts "da"
-else
-  puts  "net"
-end
+x = proc { return "greeting" }
+x.call
