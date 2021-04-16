@@ -21,6 +21,10 @@ describe ItemContainer do
     @item2 = Item.new(name:"Item2", price: 200)
   end
 
+  it "shows minimum price for the item" do
+    ItemBox.min_price.should be(0)
+  end
+
   it "adds items into the container" do
     @box.add_item(@item1)
     @box.add_item(@item2)
@@ -38,5 +42,7 @@ describe ItemContainer do
   it "user is trying to add anithing else but an item" do
     lambda {@box.add_item("shomething else")}.should raise_error
   end
+
+
 
 end

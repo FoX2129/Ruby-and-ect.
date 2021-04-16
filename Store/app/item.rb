@@ -16,6 +16,7 @@ class Item
   end
 
   attr_reader :real_price, :name
+  attr_reader :price #Not needed
 
   def price(value)
     @real_price = valuse
