@@ -1,6 +1,8 @@
 require "rspec"
+require 'rspec/collection_matchers'
 require_relative "../app/item"
 require_relative "../app/virtual_item"
+
 
 describe Item do
 
