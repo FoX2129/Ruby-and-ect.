@@ -32,6 +32,10 @@
 # a = %w{ муравей пчела кот собака лось } - массив из слов.
 
 # def say_goodnight(name)
+def method(a = 21)
+  puts a
+end
+#puts '0'.to_f == 0
 
 # result = 'Спокойной ночи, ' + name
 # return result
@@ -62,5 +66,27 @@
 #  puts  "net"
 #end
 
-x = proc { return "greeting" }
-x.call
+#<!-- <% if @cart %>          <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>          <%= render @cart %>          <% end %>        <% end %> -->
+#
+#x = proc { return "greeting" }
+#x.call
+
+#hello_array = ['no1','no2']
+#hello_array.each {|name| puts name = name.upcase}
+#hello_array.map { |name| puts name  }
+
+# hash = {_k:1, v:2}
+#
+# puts result = hash.map { |_k, v| v + 1 }
+#
+# def something(x)
+#   _unused_var, used_var = something_else(x)
+#   # некоторый код
+# end
+
+# puts 3.odd?
+# puts 3.even?
+
+def +(other)
+  puts 123+other
+end
